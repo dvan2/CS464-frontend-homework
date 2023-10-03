@@ -3,28 +3,26 @@ const resultElem = document.querySelector("div:empty");
 
 elem.addEventListener("input", handleInput);
 
-let user_input;
 function handleInput() {
-  user_input = document.querySelector("[type]").value;
-  if (!isValidNumber(user_input)) {
-    console.log(`valid: ${isValidNumber(user_input)}`);
+  if (elem.validity.badInput) {
     resultElem.style.color = "red";
     resultElem.innerHTML = "ERROR.  Please enter only numbers.";
     return;
   }
+
+  const user_input = elem.value;
+  if (user_input == "") {
+    resultElem.innerHTML = "";
+    return;
+  }
+
   if (isPalinDrome(user_input)) {
     resultElem.style.color = "green";
     resultElem.innerHTML = "Yes. This is a palindrome";
   } else {
     resultElem.style.color = "red";
-    resultElem.innerHTML = "No. Try again.";
+    resultElem.innerHTML = "Not palindrome. Try again.";
   }
-}
-
-function isValidNumber(s) {
-  //using regex to check if it's 0-9
-  const regex = new RegExp(/^\d+$/);
-  return regex.test(s);
 }
 
 function isPalinDrome(s) {
@@ -37,5 +35,6 @@ function isPalinDrome(s) {
     first++;
     last--;
   }
+
   return true;
 }
