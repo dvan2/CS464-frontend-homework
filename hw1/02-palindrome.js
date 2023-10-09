@@ -4,14 +4,14 @@ const resultElem = document.querySelector("div:empty");
 elem.addEventListener("input", handleInput);
 
 function handleInput() {
-  if (elem.validity.badInput) {
+  if (elem.validity.badInput || elem.value < 0) {
     resultElem.style.color = "red";
     resultElem.innerHTML = "ERROR.  Please enter only numbers.";
     return;
   }
 
   const user_input = elem.value;
-  if (user_input == "") {
+  if (user_input === "") {
     resultElem.innerHTML = "";
     return;
   }
@@ -29,11 +29,11 @@ function isPalinDrome(s) {
   let first = 0;
   let last = s.length - 1;
   while (first <= last) {
-    if (s[first] != s[last]) {
+    if (s[first] !== s[last]) {
       return false;
     }
-    first++;
-    last--;
+    first += 1;
+    last -= 1;
   }
 
   return true;
