@@ -11,12 +11,13 @@ function handleKeyDown(e) {
     user_input = document.querySelector("input").value + e.key;
   } else {
     user_input = document.querySelector("input").value;
+    user_input = user_input.slice(0, -1);
   }
   console.log(user_input);
   user_input = user_input.trim();
   let textString = text.textContent;
   textString = textString.replace(
-    new RegExp(user_input, "gi"),
+    new RegExp(user_input, "g"),
     (match) => `<span class="bg-warning">${match}</span>`
   );
   text.innerHTML = textString;

@@ -16,21 +16,25 @@
       <form class="form-group card mx-auto mt-5 p-3" style="width: 30em">
         <h1 class="mx-auto">Exercise 05 - Form</h1>
         <div class="form-group">
-          <label for="nameInput">Full Name:</label>
+          <label for="nameInput" class="fw-bold">Full Name:</label>
           <input type="text" class="form-control" id="nameInput" />
         </div>
         <div class="form-group">
-          <label for="emailInput">Email:</label>
+          <label for="emailInput" class="fw-bold">Email:</label>
           <input type="email" class="form-control" id="emailInput" />
         </div>
         <div class="form-group">
-          <label for="userRegistration">Registration Status</label>
-          <select class="form-control" id="userRegistration">
+          <label for="userRegistration" class="fw-bold"
+            >Registration Status</label
+          >
+          <select class="form-select" id="userRegistration">
+            <option selected>Choose an Option</option>
             <option value="registered">Registered</option>
+            <option value="waitListed">Waitlisted</option>
             <option value="notRegistered">Not Registered</option>
           </select>
         </div>
-        <label class="mt-3 mb-2"
+        <label class="mt-3 mb-2 fw-bold"
           >Have you taken any of the following courses?</label
         >
         <div class="form-check">
@@ -57,13 +61,19 @@
           >
         </div>
         <div class="form-group mt-2">
-          <label for="userComment">Anything else?</label>
+          <label class="fw-bold mb-1" for="userComment">Anything else?</label>
           <textarea class="form-control" id="userComment" rows="3"></textarea>
         </div>
 
-        <div class="form-group mt-2 mx-auto">
-          <button type="submit" class="btn btn-primary">Submit</button>
-          <button type="reset" class="btn btn-secondary">Reset</button>
+        <div class="form-group container mt-2 mx-auto">
+          <div class="row">
+            <button type="submit" class="border col btn btn-primary">
+              Submit
+            </button>
+            <button type="reset" class="border col btn btn-secondary">
+              Reset
+            </button>
+          </div>
         </div>
       </form>
     </main>

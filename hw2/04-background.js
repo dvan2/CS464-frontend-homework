@@ -9,7 +9,11 @@ function handleLoad() {
 
 function start() {
   const btnElem = document.querySelector("button");
-  const user_input = document.querySelector("select").value;
+  const user_input = document.querySelector("input").value;
+  if (user_input <= 0) {
+    alert("Please enter a valid number greater than 0");
+    return;
+  }
   if (btnElem.classList.contains("start")) {
     btnElem.classList.remove("start");
     btnElem.classList.remove("btn-danger");
