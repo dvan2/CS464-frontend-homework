@@ -40,15 +40,14 @@ function getThronesData(url) {
 
 function main() {
   getThronesData(url).then((data) => {
-    console.log(data);
     data.forEach((character) => groupCharacters(character));
     fixAbnormalData();
     groupSingleCharacters();
-    console.log(house);
-
     renderChart();
   });
 }
+
+main();
 
 function groupCharacters(character) {
   const index = house.findIndex((element) => element.name === character.family);
@@ -140,5 +139,3 @@ const renderChart = () => {
     },
   });
 };
-
-main();

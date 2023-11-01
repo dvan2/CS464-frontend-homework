@@ -1,0 +1,83 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.home--welcome {
+  margin-top: 50px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+.navbar ul a {
+  text-decoration: none;
+  padding: 10px;
+  font-size: 40px;
+  border-radius: 30px;
+}
+
+.navbar ul a:hover {
+  background-color: rgb(232, 226, 174);
+  background-color: rgb(232, 226, 174);
+}
+
+.search-bar {
+  width: 80%;
+  margin: auto;
+  margin-top: 80px;
+}
+
+.characters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.character-card {
+  margin-top: 10px;
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+  padding: 10px;
+}
+
+.character-card > img {
+  width: 200px;
+  height: 200px;
+  align-self: center;
+  object-fit: cover;
+  text-align: center;
+}
+
+.search--text {
+  width: 200px;
+  align-self: center;
+}
+
+.search--text > h3 {
+  text-align: center;
+}
+
+.house--chart {
+  margin: auto;
+  margin-top: 50px;
+  width: 60%;
+}
